@@ -1,0 +1,21 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+# Ignore git and data files
+.git/
+.gitignore
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+*.h5
+*.db
+# Ignore Jupyter and VSCode settings
+.ipynb_checkpoints/
+.vscode/
+# Ignore OS files
+.DS_Store

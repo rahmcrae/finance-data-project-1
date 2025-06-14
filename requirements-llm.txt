@@ -1,0 +1,10 @@
+# --- LLM & AI Libraries ---
+
+# langgraph 0.0.40 requires langchain-core >=0.1.46,<0.2.0
+# langchain-openai 0.1.8 requires langchain-core >=0.2.2,<0.3
+# These are incompatible. To resolve, use compatible versions:
+
+openai==1.86.0
+langgraph==0.0.40
+langchain-openai==0.0.8
+langchain-core==0.1.53
