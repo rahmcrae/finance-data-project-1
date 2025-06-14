@@ -89,5 +89,3 @@ financial_engineering/
 ## CI/CD
 
 - GitHub Actions workflow runs linting and tests on every push and PR.
-
----

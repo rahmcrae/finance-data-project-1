@@ -19,3 +19,6 @@ venv/
 .vscode/
 # Ignore OS files
 .DS_Store
+# Ignore processed data files
+data/processed/*
+!.gitkeep

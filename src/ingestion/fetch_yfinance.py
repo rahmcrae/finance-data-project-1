@@ -1,8 +1,11 @@
 import yfinance as yf
 import pandas as pd
+from datetime import datetime, timedelta
 
-def fetch_yahoo_data(tickers, start='2020-01-01', end='2025-01-01'):
-    # Explicitly set auto_adjust to False to preserve old behavior if needed
+def fetch_yahoo_data(tickers, start='2020-01-01', end=None):
+    if end is None:
+        # yfinance's 'end' is exclusive, so to get data up to yesterday, set end to today
+        end = datetime.today().strftime('%Y-%m-%d')
     df = yf.download(tickers, start=start, end=end, auto_adjust=False)
     # Handle both single and multi-index columns
     if isinstance(df.columns, pd.MultiIndex):

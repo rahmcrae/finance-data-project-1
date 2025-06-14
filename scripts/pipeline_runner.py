@@ -6,14 +6,15 @@ import os
 
 RAW_DATA_PATH = "data/processed/aapl_spy.csv"
 
-def ingester_agent(tickers, start='2020-01-01', end='2025-01-01'):
+def ingester_agent(tickers, start='2020-01-01', end=None):
     df = fetch_yahoo_data(tickers, start=start, end=end)
     os.makedirs(os.path.dirname(RAW_DATA_PATH), exist_ok=True)
     df.to_csv(RAW_DATA_PATH)
-    return RAW_DATA_PATH
+    return RAW_DATA_PATH, df
 
-def analyzer_agent(data_path):
-    df = pd.read_csv(data_path, index_col=0, parse_dates=True)
+def analyzer_agent(data_path, df=None):
+    if df is None:
+        df = pd.read_csv(data_path, index_col=0, parse_dates=True)
     features = compute_features(df)
     # Placeholder for LLM-based analysis (could use OpenAI, etc.)
     summaries = {col: summarize_timeseries(df[col], col) for col in df.columns}
@@ -21,10 +22,12 @@ def analyzer_agent(data_path):
 
 def main():
     tickers = ['AAPL', 'SPY']
-    data_path = ingester_agent(tickers)
-    features, summaries = analyzer_agent(data_path)
+    data_path, df = ingester_agent(tickers)
+    features, summaries = analyzer_agent(data_path, df)
     for asset, summary in summaries.items():
         print(f"{asset}: {summary}")
+    # Optionally print the last date in the DataFrame for clarity
+    print("Last date in data:", df.index[-1])
 
 if __name__ == "__main__":
     main()
