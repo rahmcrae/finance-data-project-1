@@ -11,7 +11,7 @@ A modular project for market data analysis, risk modeling, and AI-assisted insig
 - 📈 Visualization with Plotly and Altair
 - 🧹 Linting, formatting, and type checking for code quality
 
-## 🚀 Onboarding & Setup (For Data Analysts)
+## 🚀 Onboarding & Setup
 
 ### 1️⃣ Prerequisites
 
