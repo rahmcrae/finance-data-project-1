@@ -21,8 +21,8 @@ A modular project for market data analysis, risk modeling, and AI-assisted insig
 ### 2. Clone the Repository
 
 ```sh
-git clone https://github.com/your-org/your-repo.git
-cd your-repo/financial_engineering
+gh repo clone rahmcrae/finance-data-project-1
+cd finance-data-project-1
 ```
 
 ### 3. Build the Docker Image
