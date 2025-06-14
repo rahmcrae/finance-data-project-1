@@ -2,83 +2,92 @@
 
 A modular project for market data analysis, risk modeling, and AI-assisted insights.
 
-## Telemetry & Monitoring Every Function Call
+## Features
 
-Yes, you can collect telemetry on every function in a Python application using decorators or tracing libraries. This is typically done with:
+- Modular ingestion, feature engineering, and AI summarization
+- Agent-based pipeline (ingester, analyzer)
+- Telemetry and monitoring with OpenTelemetry and Prometheus
+- Robust logging with Loguru
+- Visualization with Plotly and Altair
+- Linting, formatting, and type checking for code quality
 
-- **Custom decorators**: Wrap each function to log calls, arguments, execution time, etc.
-- **OpenTelemetry**: Industry standard for distributed tracing and metrics, integrates with many backends (Prometheus, Jaeger, etc.).
+## Onboarding & Setup (For Data Analysts)
 
-### Example 1: Simple Logging Decorator
+### 1. Prerequisites
 
-```python
-from loguru import logger
-import time
+- [Docker](https://www.docker.com/products/docker-desktop/) installed
+- (Optional) [Make](https://www.gnu.org/software/make/) for easier commands
 
-def telemetry(func):
-    def wrapper(*args, **kwargs):
-        logger.info(f"Calling {func.__name__}")
-        start = time.time()
-        result = func(*args, **kwargs)
-        duration = time.time() - start
-        logger.info(f"{func.__name__} finished in {duration:.4f}s")
-        return result
-    return wrapper
+### 2. Clone the Repository
 
-@telemetry
-def my_function(x):
-    return x * 2
+```sh
+git clone https://github.com/your-org/your-repo.git
+cd your-repo/financial_engineering
 ```
 
-### Example 2: OpenTelemetry for Automatic Tracing
+### 3. Build the Docker Image
 
-```python
-from opentelemetry import trace
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
-
-trace.set_tracer_provider(TracerProvider())
-tracer = trace.get_tracer(__name__)
-span_processor = BatchSpanProcessor(ConsoleSpanExporter())
-trace.get_tracer_provider().add_span_processor(span_processor)
-
-def traced(func):
-    def wrapper(*args, **kwargs):
-        with tracer.start_as_current_span(func.__name__):
-            return func(*args, **kwargs)
-    return wrapper
-
-@traced
-def my_function(x):
-    return x * 2
+```sh
+make build
 ```
 
-### Example 3: Auto-Instrumentation
+### 4. Run the Project
 
-For frameworks (Flask, FastAPI, etc.), OpenTelemetry can auto-instrument all routes and handlers. For custom code, you can use decorators or metaprogramming to wrap all functions in a module/class.
+```sh
+make run
+```
 
-**Summary:**  
-- Use decorators for simple telemetry/logging.
-- Use OpenTelemetry for robust, production-grade tracing and metrics.
-- Export traces to a backend (Prometheus, Jaeger, etc.) for visualization and alerting.
+This will execute the main pipeline and print results to the console.
 
-## OpenTelemetry Integration
+### 5. Open a Shell in the Container
 
-This project uses [OpenTelemetry](https://opentelemetry.io/) for tracing and metrics.  
-Traces are exported to the console by default.  
-To export to Prometheus, Jaeger, or another backend, replace `ConsoleSpanExporter()` with the appropriate exporter in your code.
+```sh
+make shell
+```
 
-## Agent-based Pipeline
+You can use this to run Jupyter, Python, or other tools interactively.
 
-- **Ingester Agent:** Fetches and stores raw financial data.
-- **Analyzer Agent:** Loads, analyzes, and summarizes data (with LLM integration planned).
+### 6. Run Jupyter Notebook (Optional)
 
-LLM-based summaries can be implemented using OpenAI or similar APIs in the future.
+Inside the container shell:
 
-## Docker Build Performance Tips
+```sh
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+```
 
-- Ensure your `.dockerignore` excludes large files, datasets, and unnecessary directories.
-- Place `COPY requirements.txt .` and `RUN pip install ...` before `COPY . .` to maximize Docker layer caching.
-- Keep your `requirements.txt` as minimal as possible.
-- Use a fast and stable internet connection.
-- If you only need Jupyter or a subset of tools, consider splitting your requirements and using multi-stage builds.
+Then open [http://localhost:8888](http://localhost:8888) in your browser.
+
+---
+
+## Project Structure
+
+```
+financial_engineering/
+├── src/                # Source code (ingestion, features, ai, etc.)
+├── scripts/            # Pipeline runner and utility scripts
+├── notebooks/          # Jupyter notebooks for EDA and prototyping
+├── requirements-core.txt
+├── requirements-llm.txt
+├── Dockerfile
+├── Makefile
+└── README.md
+```
+
+## Telemetry & Monitoring
+
+- Uses OpenTelemetry for tracing.
+- Prometheus client for metrics.
+- Logs are handled by Loguru.
+
+## Linting, Formatting, and Testing
+
+- Lint: `flake8`
+- Format: `black`, `isort`
+- Type check: `mypy`
+- Test: `pytest`, `pytest-cov`
+
+## CI/CD
+
+- GitHub Actions workflow runs linting and tests on every push and PR.
+
+---
