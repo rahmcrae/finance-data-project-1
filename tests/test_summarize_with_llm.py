@@ -1,4 +1,9 @@
+import os
+import sys
 import pandas as pd
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.ai.summarize_with_llm import summarize_timeseries
 
 def test_summarize_timeseries_increasing():

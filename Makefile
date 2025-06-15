@@ -58,3 +58,6 @@ notebook:
 
 typecheck:
 	. .venv/bin/activate && mypy src/
+
+test:
+	. .venv/bin/activate && pytest --cov=src
