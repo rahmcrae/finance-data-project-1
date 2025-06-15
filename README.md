@@ -59,6 +59,31 @@ Then open [http://localhost:8888](http://localhost:8888) in your browser.
 
 ---
 
+## 🩺 Monitoring & Telemetry
+
+- **Prometheus Metrics:**  
+  The pipeline exposes metrics at [http://localhost:8000/metrics](http://localhost:8000/metrics) when running.  
+  You can use Prometheus or simply visit the URL to see live metrics.
+
+- **Jaeger Tracing (Optional):**  
+  To view traces, run Jaeger locally:
+  ```sh
+  docker run -d --name jaeger \
+    -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
+    -p 5775:5775/udp \
+    -p 6831:6831/udp \
+    -p 6832:6832/udp \
+    -p 5778:5778 \
+    -p 16686:16686 \
+    -p 14268:14268 \
+    -p 14250:14250 \
+    -p 9411:9411 \
+    jaegertracing/all-in-one:1.53
+  ```
+  Then open [http://localhost:16686](http://localhost:16686) in your browser.
+
+---
+
 ## 🗂️ Project Structure
 
 ```
@@ -91,3 +116,20 @@ finance-data-project-1/
 - 🛡️ GitHub Actions workflow runs linting and tests on every push and PR.
 
 ---
+
+## 🏗️ Why are ingestion functions in separate files?
+
+- Each `fetch_*.py` file is a **module** for a specific data source (e.g., Yahoo Finance, FRED).
+- This modular approach allows you to:
+  - Reuse ingestion logic across different pipelines or classes.
+  - Keep code organized and maintainable as the project grows.
+  - Easily add new data sources by creating new modules.
+
+**Could these be methods in a class?**
+- Yes, you could refactor these functions as static/class methods within a `DataIngestion` class or similar.
+- For small projects, functions in modules are simple and flexible.
+- For larger, more complex pipelines, using classes (with methods for each data source) can improve extensibility, encapsulation, and testability.
+
+**Best Practice:**  
+- Start modular with functions for each data source.
+- If you need more advanced orchestration, state, or configuration, refactor into a class-based ingestion system.

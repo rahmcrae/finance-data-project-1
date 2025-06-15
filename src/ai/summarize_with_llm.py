@@ -13,6 +13,8 @@ tracer = trace.get_tracer(__name__)
 # trace.get_tracer_provider().add_span_processor(span_processor)
 
 # Example Jaeger exporter setup (uncomment and configure if needed)
+# from opentelemetry.exporter.jaeger.thrift import JaegerExporter
+# from opentelemetry.sdk.trace.export import BatchSpanProcessor
 # jaeger_exporter = JaegerExporter(
 #     agent_host_name="localhost",
 #     agent_port=6831,

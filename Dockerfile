@@ -32,4 +32,4 @@ ENV PYTHONPATH=/app
 
 COPY . .
 
-CMD ["python", "scripts/pipeline_runner.py"]
+CMD ["python", "src/ingestion/pipeline_runner.py"]

@@ -54,11 +54,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    def run_pipeline():
-        pipeline = Pipeline(tickers)
-        pipeline.run()
-
-    run_pipeline()
-
-if __name__ == "__main__":
-    main()
