@@ -55,3 +55,6 @@ notebook:
 		exit 1; \
 	fi
 	. .venv/bin/activate && jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+
+typecheck:
+	. .venv/bin/activate && mypy src/

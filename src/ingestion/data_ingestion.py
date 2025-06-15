@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 import pandas as pd
-import yfinance as yf
+import yfinance as yf  # type: ignore
 
 
 class DataIngestion:
