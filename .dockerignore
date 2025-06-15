@@ -22,5 +22,20 @@ venv/
 # Ignore processed data files
 data/processed/*
 !.gitkeep
+
+# Ignore Airflow state, logs, and database files
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/airflow-webserver.pid
+airflow/webserver_config.py
+airflow/logs/
+airflow/*.log
+
+# Only include dags and .gitkeep
+!airflow/dags/
+!airflow/dags/**
+!airflow/.gitkeep
+
+# Ignore Airflow log files at project root
 airflow-webserver.log
 airflow-scheduler.log
