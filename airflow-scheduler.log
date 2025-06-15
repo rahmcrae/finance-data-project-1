@@ -1,0 +1,26 @@
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[[34m2025-06-15T00:06:12.540-0400[0m] {[34mexecutor_loader.py:[0m117} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2025-06-15T00:06:12.620-0400[0m] {[34mscheduler_job_runner.py:[0m797} INFO[0m - Starting the scheduler[0m
+[[34m2025-06-15T00:06:12.620-0400[0m] {[34mscheduler_job_runner.py:[0m804} INFO[0m - Processing each file at most -1 times[0m
+[[34m2025-06-15T00:06:12.623-0400[0m] {[34mmanager.py:[0m166} INFO[0m - Launched DagFileProcessorManager with pid: 56528[0m
+[[34m2025-06-15T00:06:12.624-0400[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2025-06-15T00:06:12.638-0400[0m] {[34mscheduler_job_runner.py:[0m1628} INFO[0m - Marked 2 SchedulerJob instances as failed[0m
+[2025-06-15 00:06:13 -0400] [56527] [INFO] Starting gunicorn 23.0.0
+[2025-06-15 00:06:13 -0400] [56527] [ERROR] Connection in use: ('::', 8793)
+[2025-06-15 00:06:13 -0400] [56527] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[[34m2025-06-15T00:06:13.211-0400[0m] {[34msettings.py:[0m61} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2025-06-15T00:06:13.221-0400] {manager.py:410} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-06-15 00:06:14 -0400] [56527] [ERROR] Connection in use: ('::', 8793)
+[2025-06-15 00:06:14 -0400] [56527] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-15 00:06:15 -0400] [56527] [ERROR] Connection in use: ('::', 8793)
+[2025-06-15 00:06:15 -0400] [56527] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-15 00:06:16 -0400] [56527] [ERROR] Connection in use: ('::', 8793)
+[2025-06-15 00:06:16 -0400] [56527] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-15 00:06:17 -0400] [56527] [ERROR] Connection in use: ('::', 8793)
+[2025-06-15 00:06:17 -0400] [56527] [ERROR] connection to ('::', 8793) failed: [Errno 48] Address already in use
+[2025-06-15 00:06:18 -0400] [56527] [ERROR] Can't connect to ('::', 8793)
+[[34m2025-06-15T00:11:13.601-0400[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m

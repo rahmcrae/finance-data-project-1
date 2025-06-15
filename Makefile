@@ -61,3 +61,34 @@ typecheck:
 
 test:
 	. .venv/bin/activate && pytest --cov=src
+
+airflow-init:
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true
+
+airflow-webserver:
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow webserver --port 8080
+
+airflow-scheduler:
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow scheduler
+
+# VSCode-friendly: Run both Airflow processes in the current terminal (backgrounded)
+airflow-up:
+	@echo "Starting Airflow webserver and scheduler in the current terminal..."
+	@echo "To stop them, press Ctrl+C or run 'make airflow-down'."
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && \
+	nohup airflow webserver --port 8080 > airflow-webserver.log 2>&1 & \
+	nohup airflow scheduler > airflow-scheduler.log 2>&1 & \
+	sleep 2 && echo "Airflow webserver running on http://localhost:8080"
+
+airflow-down:
+	@echo "Stopping Airflow webserver and scheduler..."
+	-@pkill -f "airflow webserver"
+	-@pkill -f "airflow scheduler"
+	@echo "Stopped Airflow processes."
+
+# Simple: Run Airflow webserver and scheduler in two VSCode terminals
+airflow-webserver-foreground:
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow webserver --port 8080
+
+airflow-scheduler-foreground:
+	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow scheduler

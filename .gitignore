@@ -6,3 +6,19 @@ data/processed/*
 .venv/
 venv/
 notebooks/.ipynb_checkpoints/*
+
+# Ignore all Airflow state, logs, and database files
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/airflow-webserver.pid
+airflow/webserver_config.py
+airflow/logs/
+airflow/*.log
+
+# Optionally keep the dags directory and a .gitkeep for the airflow folder
+!airflow/dags/
+!airflow/.gitkeep
+
+# Ignore Airflow log files at project root
+airflow-webserver.log
+airflow-scheduler.log

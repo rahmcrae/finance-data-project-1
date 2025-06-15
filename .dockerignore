@@ -22,3 +22,5 @@ venv/
 # Ignore processed data files
 data/processed/*
 !.gitkeep
+airflow-webserver.log
+airflow-scheduler.log

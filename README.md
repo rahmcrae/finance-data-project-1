@@ -126,3 +126,35 @@ finance-data-project-1/
 ## ⚡ CI/CD
 
 - 🛡️ GitHub Actions workflow runs linting and tests on every push and PR.
+
+## 🛫 Running Airflow DAGs
+
+1. **Initialize Airflow (first time only):**
+   ```sh
+   export AIRFLOW_HOME=$(pwd)/airflow
+   pip install apache-airflow==2.7.3
+   airflow db init
+   airflow users create \
+     --username admin --password admin --firstname Admin --lastname User \
+     --role Admin --email admin@example.com
+   ```
+
+2. **Start Airflow webserver and scheduler (in separate terminals):**
+   ```sh
+   export AIRFLOW_HOME=$(pwd)/airflow
+   airflow webserver --port 8080
+   ```
+   (in another terminal)
+   ```sh
+   export AIRFLOW_HOME=$(pwd)/airflow
+   airflow scheduler
+   ```
+
+3. **Access the Airflow UI:**
+   - Open [http://localhost:8080](http://localhost:8080)
+   - Log in with the credentials you set above (default: admin/admin).
+
+4. **Trigger and monitor your DAG:**
+   - Find your DAG (e.g., `airflow_ingestion_pipeline`) in the UI.
+   - Turn it on and trigger a run.
+   - Monitor progress, logs, and task status directly in the UI.
