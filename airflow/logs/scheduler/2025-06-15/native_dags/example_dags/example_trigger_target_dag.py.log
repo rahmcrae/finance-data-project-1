@@ -219,3 +219,24 @@
 [2025-06-15T00:14:04.595-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:14:04.595-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:14:04.599-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:14:04.599-0400] {dag.py:3722} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
 [2025-06-15T00:14:04.607-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.147 seconds
+[2025-06-15T00:15:44.798-0400] {processor.py:157} INFO - Started process (PID=66438) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:15:44.801-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-06-15T00:15:44.801-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:44.801-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:15:44.843-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:15:44.930-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:44.930-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:15:44.933-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:44.933-0400] {dag.py:3722} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-06-15T00:15:44.941-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.143 seconds
+[2025-06-15T00:16:38.692-0400] {processor.py:157} INFO - Started process (PID=67081) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:16:38.694-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-06-15T00:16:38.695-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:38.695-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:16:38.737-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:16:38.824-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:38.824-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:16:38.828-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:38.828-0400] {dag.py:3722} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-06-15T00:16:38.836-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.145 seconds
+[2025-06-15T00:17:31.709-0400] {processor.py:157} INFO - Started process (PID=71997) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:17:31.711-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-06-15T00:17:31.712-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:31.712-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:17:31.755-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-06-15T00:17:31.842-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:31.842-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:17:31.846-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:31.846-0400] {dag.py:3722} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-06-15T00:17:31.855-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.147 seconds

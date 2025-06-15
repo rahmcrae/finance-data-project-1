@@ -184,3 +184,10 @@
 [2025-06-15T00:15:05.234-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:05.233-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:15:05.240-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:05.240-0400] {dag.py:3722} INFO - Setting next_dagrun for example_short_circuit_decorator to 2025-06-14T04:15:05.240749+00:00, run_after=2025-06-15T04:15:05.240749+00:00
 [2025-06-15T00:15:05.249-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py took 0.153 seconds
+[2025-06-15T00:16:51.831-0400] {processor.py:157} INFO - Started process (PID=67926) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py
+[2025-06-15T00:16:51.834-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py for tasks to queue
+[2025-06-15T00:16:51.835-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:51.834-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py
+[2025-06-15T00:16:51.882-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_short_circuit_decorator']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py
+[2025-06-15T00:16:51.974-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:51.974-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:16:51.981-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:51.981-0400] {dag.py:3722} INFO - Setting next_dagrun for example_short_circuit_decorator to 2025-06-14T04:16:51.981469+00:00, run_after=2025-06-15T04:16:51.981469+00:00
+[2025-06-15T00:16:51.990-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_decorator.py took 0.159 seconds

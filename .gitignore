@@ -15,7 +15,8 @@ airflow/webserver_config.py
 airflow/logs/
 airflow/*.log
 
-# Optionally keep the dags directory and a .gitkeep for the airflow folder
+# Ignore all files in airflow except dags and .gitkeep
+airflow/*
 !airflow/dags/
 !airflow/.gitkeep
 
