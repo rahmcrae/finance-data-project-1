@@ -1,4 +1,8 @@
-name: Data Engineering CI
+name: Project Continuous Integration (CI) Continuous Deployment (CD)
+description: |
+  This workflow runs on every push and pull request to the main branch.
+  It sets up a Python environment, installs dependencies, runs linting,
+  type checking, and tests for the project.
 
 on:
   push:
