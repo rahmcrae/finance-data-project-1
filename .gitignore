@@ -32,3 +32,6 @@ airflow/*
 # Ignore Python cache in airflow/dags
 airflow/dags/__pycache__/
 airflow/dags/**/*.pyc
+
+# macOS Finder metadata
+.DS_Store
