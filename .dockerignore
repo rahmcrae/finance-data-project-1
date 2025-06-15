@@ -20,7 +20,7 @@ venv/
 # Ignore OS files
 .DS_Store
 # Ignore processed data files
-data/processed/*
+# data/processed/*
 !.gitkeep
 
 # Ignore Airflow state, logs, and database files
@@ -39,3 +39,7 @@ airflow/*.log
 # Ignore Airflow log files at project root
 airflow-webserver.log
 airflow-scheduler.log
+
+# Ignore Python cache in airflow/dags
+airflow/dags/__pycache__/
+airflow/dags/**/*.pyc

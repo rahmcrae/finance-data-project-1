@@ -1,7 +1,7 @@
 *.pyc
 __pycache__/
 .env
-data/processed/*
+# data/processed/*
 !.gitkeep
 .venv/
 venv/
@@ -14,6 +14,7 @@ airflow/airflow-webserver.pid
 airflow/webserver_config.py
 airflow/logs/
 airflow/*.log
+airflow/dags/__pycache__/
 
 # Ignore pytest/coverage output
 .coverage
@@ -22,8 +23,12 @@ airflow/*.log
 airflow-webserver.log
 airflow-scheduler.log
 
-# Ignore everything in airflow except the dags directory and .gitkeep
+# Ignore everything in airflow except dags and .gitkeep
 airflow/*
 !airflow/dags/
 !airflow/dags/**
 !airflow/.gitkeep
+
+# Ignore Python cache in airflow/dags
+airflow/dags/__pycache__/
+airflow/dags/**/*.pyc
