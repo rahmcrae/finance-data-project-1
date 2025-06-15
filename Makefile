@@ -102,11 +102,3 @@ airflow-down:
 	-@pkill -f "airflow webserver"
 	-@pkill -f "airflow scheduler"
 	@echo "Stopped Airflow processes."
-
-# 🖥️ (VSCode-friendly) Run Airflow webserver in foreground terminal
-airflow-webserver-foreground:
-	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow webserver --port 8080
-
-# 🖥️ (VSCode-friendly) Run Airflow scheduler in foreground terminal
-airflow-scheduler-foreground:
-	. .venv/bin/activate && export AIRFLOW_HOME=$(PWD)/airflow && airflow scheduler
