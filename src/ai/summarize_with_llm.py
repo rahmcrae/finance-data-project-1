@@ -35,7 +35,7 @@ def traced(func):
 @traced
 def summarize_timeseries(df, asset_name):
     trend = "increasing" if df.iloc[-1] > df.iloc[0] else "decreasing"
-    summary = f"Asset {asset_name} shows a {trend} trend over the period with {len(df)} data points."
+    summary = f"Asset {asset_name} shows a {trend} trend in {len(df)} data points."
     return summary
 
 

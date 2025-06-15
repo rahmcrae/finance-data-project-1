@@ -48,3 +48,10 @@ lint:
 
 format:
 	. .venv/bin/activate && black src/ && isort src/
+
+notebook:
+	@if [ ! -d ".venv" ]; then \
+		echo "Virtual environment not found. Run 'make install' first."; \
+		exit 1; \
+	fi
+	. .venv/bin/activate && jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser

@@ -59,6 +59,18 @@ Then open [http://localhost:8888](http://localhost:8888) in your browser.
 
 ---
 
+## 📓 Jupyter Notebook
+
+To launch Jupyter Notebook with all dependencies in your virtual environment:
+
+```sh
+make notebook
+```
+
+Then open [http://localhost:8888](http://localhost:8888) in your browser.
+
+---
+
 ## 🩺 Monitoring & Telemetry
 
 - **Prometheus Metrics:**  
@@ -111,62 +123,6 @@ finance-data-project-1/
 - 🧐 Type check: `mypy`
 - 🧪 Test: `pytest`, `pytest-cov`
 
-### ⚡ How to Fix Lint Errors
-
-If you run `make lint` and still see line length errors (`E501`), but `make format` reports "files left unchanged," it means `black` is using a longer line length than `flake8`'s default (79).  
-To resolve this, you can:
-
-- **Option 1:** Configure `flake8` to allow longer lines (e.g., 88, which is `black`'s default):
-
-Create a `.flake8` file in your project root with:
-
-```
-[flake8]
-max-line-length = 88
-```
-
-- **Option 2:** Override the line length for `black` in `pyproject.toml`:
-
-```toml
-[tool.black]
-line-length = 79
-```
-
-Then, re-run `make format` and `make lint`.
-
-### ⚠️ Note on Formatting and Linting
-
-If you keep seeing `E501 line too long` errors after running `black` and `isort`, it's because:
-- `black` defaults to a line length of 88, but `flake8` may still enforce 79 or 88 depending on your `.flake8` config.
-- If a line is longer than your `.flake8` `max-line-length`, you must manually break it up.
-
-**How to fix:**
-- Manually split any lines longer than your `.flake8` `max-line-length` (e.g., 88).
-- Re-run `make lint` to confirm.
-
-**If you want to avoid this in the future:**
-- Always keep your `.flake8` `max-line-length` and `black`'s line length in sync.
-- You can set `black`'s line length with:  
-  `black --line-length 88 src/`
-
----
-
 ## ⚡ CI/CD
 
 - 🛡️ GitHub Actions workflow runs linting and tests on every push and PR.
-
-## 🐍 Local Development with Virtual Environment
-
-To use a virtual environment for local development and code formatting:
-
-```sh
-make venv
-make install
-```
-
-To auto-format and lint your code:
-
-```sh
-make format
-make lint
-```
