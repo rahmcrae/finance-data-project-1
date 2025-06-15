@@ -1,53 +1,0 @@
-[2025-06-14T23:59:38.891-0400] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airflow_ingestion_pipeline.fetch_yahoo_data manual__2025-06-15T03:59:36.364238+00:00 [queued]>
-[2025-06-14T23:59:38.894-0400] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airflow_ingestion_pipeline.fetch_yahoo_data manual__2025-06-15T03:59:36.364238+00:00 [queued]>
-[2025-06-14T23:59:38.894-0400] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
-[2025-06-14T23:59:38.899-0400] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): fetch_yahoo_data> on 2025-06-15 03:59:36.364238+00:00
-[2025-06-14T23:59:38.903-0400] {standard_task_runner.py:57} INFO - Started process 50865 to run task
-[2025-06-14T23:59:38.907-0400] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'airflow_ingestion_pipeline', 'fetch_yahoo_data', 'manual__2025-06-15T03:59:36.364238+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/airflow_ingestion_pipeline.py', '--cfg-path', '/var/folders/tb/msfbn9cj2zl2d6v2p7fz0hw40000gn/T/tmp06xrmfqq']
-[2025-06-14T23:59:38.908-0400] {standard_task_runner.py:85} INFO - Job 8: Subtask fetch_yahoo_data
-[2025-06-14T23:59:38.929-0400] {task_command.py:416} INFO - Running <TaskInstance: airflow_ingestion_pipeline.fetch_yahoo_data manual__2025-06-15T03:59:36.364238+00:00 [running]> on host mac.lan
-[2025-06-14T23:59:38.954-0400] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='airflow_ingestion_pipeline' AIRFLOW_CTX_TASK_ID='fetch_yahoo_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-15T03:59:36.364238+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-15T03:59:36.364238+00:00'
-[2025-06-14T23:59:39.237-0400] {logging_mixin.py:154} WARNING - [                       0%                       ]
-[2025-06-14T23:59:39.324-0400] {logging_mixin.py:154} WARNING - [**                     5%                       ]  2 of 40 completed
-[2025-06-14T23:59:39.328-0400] {logging_mixin.py:154} WARNING - [****                   8%                       ]  3 of 40 completed
-[2025-06-14T23:59:39.350-0400] {logging_mixin.py:154} WARNING - [*****                 10%                       ]  4 of 40 completed
-[2025-06-14T23:59:39.354-0400] {logging_mixin.py:154} WARNING - [******                12%                       ]  5 of 40 completed
-[2025-06-14T23:59:39.370-0400] {logging_mixin.py:154} WARNING - [*******               15%                       ]  6 of 40 completed
-[2025-06-14T23:59:39.391-0400] {logging_mixin.py:154} WARNING - [*********             18%                       ]  7 of 40 completed
-[2025-06-14T23:59:39.393-0400] {logging_mixin.py:154} WARNING - [**********            20%                       ]  8 of 40 completed
-[2025-06-14T23:59:39.394-0400] {logging_mixin.py:154} WARNING - [***********           22%                       ]  9 of 40 completed
-[2025-06-14T23:59:39.484-0400] {logging_mixin.py:154} WARNING - [************          25%                       ]  10 of 40 completed
-[2025-06-14T23:59:39.555-0400] {logging_mixin.py:154} WARNING - [*************         28%                       ]  11 of 40 completed
-[2025-06-14T23:59:39.580-0400] {logging_mixin.py:154} WARNING - [**************        30%                       ]  12 of 40 completed
-[2025-06-14T23:59:39.586-0400] {logging_mixin.py:154} WARNING - [***************       32%                       ]  13 of 40 completed
-[2025-06-14T23:59:39.588-0400] {logging_mixin.py:154} WARNING - [*****************     35%                       ]  14 of 40 completed
-[2025-06-14T23:59:39.602-0400] {logging_mixin.py:154} WARNING - [******************    38%                       ]  15 of 40 completed
-[2025-06-14T23:59:39.608-0400] {logging_mixin.py:154} WARNING - [*******************   40%                       ]  16 of 40 completed
-[2025-06-14T23:59:39.627-0400] {logging_mixin.py:154} WARNING - [********************  42%                       ]  17 of 40 completed
-[2025-06-14T23:59:39.629-0400] {logging_mixin.py:154} WARNING - [**********************45%                       ]  18 of 40 completed
-[2025-06-14T23:59:39.638-0400] {logging_mixin.py:154} WARNING - [**********************48%                       ]  19 of 40 completed
-[2025-06-14T23:59:39.659-0400] {logging_mixin.py:154} WARNING - [**********************50%                       ]  20 of 40 completed
-[2025-06-14T23:59:39.794-0400] {logging_mixin.py:154} WARNING - [**********************52%                       ]  21 of 40 completed
-[2025-06-14T23:59:39.803-0400] {logging_mixin.py:154} WARNING - [**********************55%*                      ]  22 of 40 completed
-[2025-06-14T23:59:39.815-0400] {logging_mixin.py:154} WARNING - [**********************57%**                     ]  23 of 40 completed
-[2025-06-14T23:59:39.897-0400] {logging_mixin.py:154} WARNING - [**********************60%****                   ]  24 of 40 completed
-[2025-06-14T23:59:39.901-0400] {logging_mixin.py:154} WARNING - [**********************62%*****                  ]  25 of 40 completed
-[2025-06-14T23:59:39.903-0400] {logging_mixin.py:154} WARNING - [**********************65%******                 ]  26 of 40 completed
-[2025-06-14T23:59:39.924-0400] {logging_mixin.py:154} WARNING - [**********************68%********               ]  27 of 40 completed
-[2025-06-14T23:59:39.936-0400] {logging_mixin.py:154} WARNING - [**********************70%*********              ]  28 of 40 completed
-[2025-06-14T23:59:39.938-0400] {logging_mixin.py:154} WARNING - [**********************72%**********             ]  29 of 40 completed
-[2025-06-14T23:59:39.948-0400] {logging_mixin.py:154} WARNING - [**********************75%***********            ]  30 of 40 completed
-[2025-06-14T23:59:39.981-0400] {logging_mixin.py:154} WARNING - [**********************78%************           ]  31 of 40 completed
-[2025-06-14T23:59:39.991-0400] {logging_mixin.py:154} WARNING - [**********************80%*************          ]  32 of 40 completed
-[2025-06-14T23:59:40.044-0400] {logging_mixin.py:154} WARNING - [**********************82%**************         ]  33 of 40 completed
-[2025-06-14T23:59:40.109-0400] {logging_mixin.py:154} WARNING - [**********************85%****************       ]  34 of 40 completed
-[2025-06-14T23:59:40.123-0400] {logging_mixin.py:154} WARNING - [**********************88%*****************      ]  35 of 40 completed
-[2025-06-14T23:59:40.146-0400] {logging_mixin.py:154} WARNING - [**********************90%******************     ]  36 of 40 completed
-[2025-06-14T23:59:40.177-0400] {logging_mixin.py:154} WARNING - [**********************92%*******************    ]  37 of 40 completed
-[2025-06-14T23:59:40.194-0400] {logging_mixin.py:154} WARNING - [**********************95%*********************  ]  38 of 40 completed
-[2025-06-14T23:59:40.216-0400] {logging_mixin.py:154} WARNING - [**********************98%********************** ]  39 of 40 completed
-[2025-06-14T23:59:40.217-0400] {logging_mixin.py:154} WARNING - [*********************100%***********************]  40 of 40 completed
-[2025-06-14T23:59:40.296-0400] {python.py:194} INFO - Done. Returned value was: None
-[2025-06-14T23:59:40.301-0400] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=airflow_ingestion_pipeline, task_id=fetch_yahoo_data, execution_date=20250615T035936, start_date=20250615T035938, end_date=20250615T035940
-[2025-06-14T23:59:40.350-0400] {local_task_job_runner.py:228} INFO - Task exited with return code 0
-[2025-06-14T23:59:40.357-0400] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
