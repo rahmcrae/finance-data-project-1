@@ -191,3 +191,10 @@
 [2025-06-15T00:16:42.811-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:42.811-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:16:42.818-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:42.818-0400] {dag.py:3722} INFO - Setting next_dagrun for example_task_group to 2025-06-14T04:16:42.818242+00:00, run_after=2025-06-15T04:16:42.818242+00:00
 [2025-06-15T00:16:42.826-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.142 seconds
+[2025-06-15T00:18:26.129-0400] {processor.py:157} INFO - Started process (PID=73364) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2025-06-15T00:18:26.132-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2025-06-15T00:18:26.132-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:26.132-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2025-06-15T00:18:26.142-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2025-06-15T00:18:26.256-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:26.255-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:18:26.262-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:26.262-0400] {dag.py:3722} INFO - Setting next_dagrun for example_task_group to 2025-06-14T04:18:26.262548+00:00, run_after=2025-06-15T04:18:26.262548+00:00
+[2025-06-15T00:18:26.270-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.141 seconds

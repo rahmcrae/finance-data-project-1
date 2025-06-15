@@ -142,3 +142,10 @@
 [2025-06-15T00:16:03.001-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:03.001-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:16:03.005-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:03.005-0400] {dag.py:3722} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
 [2025-06-15T00:16:03.016-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 0.469 seconds
+[2025-06-15T00:17:49.535-0400] {processor.py:157} INFO - Started process (PID=72992) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-06-15T00:17:49.538-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2025-06-15T00:17:49.538-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:49.538-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-06-15T00:17:49.654-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_dag_decorator']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-06-15T00:17:49.992-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:49.991-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:17:49.996-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:49.996-0400] {dag.py:3722} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2025-06-15T00:17:50.005-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 0.471 seconds

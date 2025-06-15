@@ -149,3 +149,10 @@
 [2025-06-15T00:15:58.966-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:58.966-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:15:58.972-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:15:58.972-0400] {dag.py:3722} INFO - Setting next_dagrun for example_dynamic_task_mapping to 2022-03-04T00:00:00+00:00, run_after=2022-03-05T00:00:00+00:00
 [2025-06-15T00:15:58.980-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.150 seconds
+[2025-06-15T00:17:45.719-0400] {processor.py:157} INFO - Started process (PID=72983) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-06-15T00:17:45.722-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-06-15T00:17:45.722-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:45.722-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-06-15T00:17:45.763-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_dynamic_task_mapping']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-06-15T00:17:45.849-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:45.849-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:17:45.856-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:45.856-0400] {dag.py:3722} INFO - Setting next_dagrun for example_dynamic_task_mapping to 2022-03-04T00:00:00+00:00, run_after=2022-03-05T00:00:00+00:00
+[2025-06-15T00:17:45.863-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.145 seconds

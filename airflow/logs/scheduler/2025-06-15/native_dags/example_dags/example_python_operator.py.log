@@ -170,3 +170,10 @@
 [2025-06-15T00:17:01.351-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:01.351-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:17:01.354-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:01.354-0400] {dag.py:3722} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
 [2025-06-15T00:17:01.362-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py took 0.392 seconds
+[2025-06-15T00:18:44.264-0400] {processor.py:157} INFO - Started process (PID=73612) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-15T00:18:44.267-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-15T00:18:44.267-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:44.267-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-15T00:18:44.310-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_python_operator']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-15T00:18:44.652-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:44.652-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:18:44.656-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:44.656-0400] {dag.py:3722} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-15T00:18:44.665-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_python_operator.py took 0.401 seconds

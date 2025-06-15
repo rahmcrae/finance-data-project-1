@@ -223,3 +223,8 @@
 [2025-06-15T00:17:18.989-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:17:18.989-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py
 [2025-06-15T00:17:18.990-0400] {processor.py:841} WARNING - No viable dags retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py
 [2025-06-15T00:17:19.073-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py took 0.088 seconds
+[2025-06-15T00:18:10.910-0400] {processor.py:157} INFO - Started process (PID=73227) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-06-15T00:18:10.913-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py for tasks to queue
+[2025-06-15T00:18:10.913-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:10.913-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-06-15T00:18:10.914-0400] {processor.py:841} WARNING - No viable dags retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py
+[2025-06-15T00:18:10.992-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/plugins/listener_plugin.py took 0.083 seconds

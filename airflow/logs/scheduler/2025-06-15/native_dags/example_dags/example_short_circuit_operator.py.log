@@ -191,3 +191,10 @@
 [2025-06-15T00:16:50.121-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:50.121-0400] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-06-15T00:16:50.128-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:16:50.128-0400] {dag.py:3722} INFO - Setting next_dagrun for example_short_circuit_operator to 2025-06-14T04:16:50.127984+00:00, run_after=2025-06-15T04:16:50.127984+00:00
 [2025-06-15T00:16:50.135-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.151 seconds
+[2025-06-15T00:18:33.464-0400] {processor.py:157} INFO - Started process (PID=73485) to work on /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-06-15T00:18:33.466-0400] {processor.py:829} INFO - Processing file /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py for tasks to queue
+[2025-06-15T00:18:33.467-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:33.467-0400] {dagbag.py:536} INFO - Filling up the DagBag from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-06-15T00:18:33.484-0400] {processor.py:839} INFO - DAG(s) dict_keys(['example_short_circuit_operator']) retrieved from /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-06-15T00:18:33.598-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:33.598-0400] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-06-15T00:18:33.604-0400] {logging_mixin.py:154} INFO - [2025-06-15T00:18:33.604-0400] {dag.py:3722} INFO - Setting next_dagrun for example_short_circuit_operator to 2025-06-14T04:18:33.604575+00:00, run_after=2025-06-15T04:18:33.604575+00:00
+[2025-06-15T00:18:33.612-0400] {processor.py:179} INFO - Processing /Users/rah/.pyenv/versions/3.10.11/lib/python3.10/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.149 seconds
