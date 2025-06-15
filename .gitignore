@@ -15,12 +15,11 @@ airflow/webserver_config.py
 airflow/logs/
 airflow/*.log
 
+# Ignore pytest/coverage output
+.coverage
+
 # Ignore everything in airflow except the dags directory and .gitkeep
 airflow/*
 !airflow/dags/
 !airflow/dags/**
 !airflow/.gitkeep
-
-# Ignore Airflow log files at project root
-airflow-webserver.log
-airflow-scheduler.log
