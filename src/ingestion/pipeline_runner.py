@@ -1,4 +1,4 @@
-from src.ingestion.data_ingestion import DataIngestion
+from src.ingestion.data_ingestion import DataIngestion, load_tickers
 from src.features.compute_features import compute_features
 from src.ai.summarize_with_llm import summarize_timeseries
 from prometheus_client import start_http_server, Summary
@@ -7,18 +7,6 @@ import json
 
 RAW_DATA_PATH = "data/processed/financial_data.csv"
 TICKERS_CONFIG_PATH = "config/tickers.json"
-
-def load_tickers(config_path=TICKERS_CONFIG_PATH):
-    if os.path.exists(config_path):
-        with open(config_path, "r") as f:
-            return json.load(f)
-    # fallback default
-    return [
-        'AAPL', 'SPY', 'GOOG', 'MSFT', 'AMZN', 'TSLA', 'META', 'NVDA', 'JPM', 'V',
-        'UNH', 'HD', 'PG', 'MA', 'DIS', 'BAC', 'ADBE', 'CMCSA', 'NFLX', 'KO',
-        'PFE', 'PEP', 'T', 'CSCO', 'XOM', 'VZ', 'ABT', 'CVX', 'WMT', 'MCD',
-        'INTC', 'CRM', 'MRK', 'NKE', 'TMO', 'LLY', 'ORCL', 'COST', 'DHR', 'MDT'
-    ]
 
 class Pipeline:
     def __init__(self, tickers=None, start='2020-01-01', end=None, data_path=RAW_DATA_PATH):
