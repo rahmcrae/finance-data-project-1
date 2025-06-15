@@ -2,6 +2,7 @@ IMAGE_NAME=fin_data_project_001
 CONTAINER_NAME=fin_data_project_001_container
 
 .PHONY: build run shell stop logs jaeger
+.PHONY: venv install lint format
 
 build:
 	docker build -t $(IMAGE_NAME) .
@@ -35,3 +36,15 @@ jaeger:
 		jaegertracing/all-in-one:1.53
 
 # Prometheus metrics are available at http://localhost:8000/metrics when the container is running.
+
+venv:
+	python3 -m venv .venv
+
+install: venv
+	. .venv/bin/activate && pip install --upgrade pip && pip install -r requirements-core.txt -r requirements-llm.txt
+
+lint:
+	. .venv/bin/activate && flake8 src/
+
+format:
+	. .venv/bin/activate && black src/ && isort src/
